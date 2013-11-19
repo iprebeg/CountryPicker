@@ -86,6 +86,7 @@
             NSString *countryName = [[NSLocale currentLocale] displayNameForKey:NSLocaleIdentifier value:identifier];
             if (countryName) namesByCode[code] = countryName;
         }
+        [namesByCode setObject:@"<None>" forKey:@""];
         _countryNamesByCode = [namesByCode copy];
     }
     return _countryNamesByCode;
